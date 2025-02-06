@@ -1,51 +1,44 @@
-# StarkNext
+# Fantasy Sports AI Simulation
 
-StarkNext is a quick-start template designed to help you build decentralized applications (DApps) on Starknet using Next.js and Jotai.
+## Overview
 
-Starknet is a decentralized, permissionless and scalable zkRollup, while Next.js is a popular React framework with built-in features like server-side rendering and static site generation. Jotai provides minimalistic state management for your React app, making state logic simple and intuitive.
-
-This starter also includes functionality for Starknet wallet connections, so you can focus on building your DApp without the hassle of setting up these connections from scratch.
+Fantasy sports are often more "sports" than "fantasy." This project reimagines fantasy sports by introducing autonomous AI players with dynamic skills and personalities. Two new fantasy sports teams will be created, each featuring players with attributes like speed, shot power, and accuracy. These players will be powered by Eliza and interact autonomously in a dynamic and evolving gameplay environment.
 
 ## Features
 
-- **Custom Wallet Modal**: Built on top of _get-starknet-core_, StarkNext allows you to implement your own custom wallet modal, giving you more control over the user experience than ever before.
+### AI Player Agents
+Instead of just static players, each player will is an autonomous AI agent powered by Eliza. These agents will have the ability to:
+- Develop their skills based on training and match performance.
+- Exhibit dynamic personalities that influence their performance and the team's chemistry.
+- Make autonomous decisions during matches, adjusting based on their attributes and game situation.
+- Interact with other player agents to form team dynamics.
 
-- **Integrated StarkNet Wallet Connection**: To save you the trouble of setting up wallet connections from scratch, StarkNext pre-configures these connections. You can connect to StarkNet wallets seamlessly, allowing you to focus more on building the unique aspects of your DApp.
+### Scouting Agent System
+AI agents will act as scouts to:
+- Analyze player agents and provide detailed performance reports.
+- Recommend optimal team composition and tactics.
+- Help discover undervalued players for trading and team improvements.
 
-## Technologies
+### Manager Agent Assistant
+Each user will have an AI agent assistant that will help them manage their team. This agent will:
+- Provide strategic advice for upcoming matches.
+- Suggest training programs for player development.
+- Manage negotiations with other teams' agents for trades.
 
-StarkNext is built using a stack of powerful technologies each chosen to provide you the best tools for DApp development:
+### Random Sequence Game
+This game will use a Linear Congruential Generator (LCG) for generating a fixed sequence of steps within the fantasy game. A Verifiable Random Function (VRF) is used to seed the sequence in a commit-reveal design pattern, simulating the game. The steps of the simulation will be posted on the blockchain and verified using the VRF seed.
 
-- **Next.js**: A versatile framework for building React applications. With built-in features like server-side rendering and static site generation, Next.js gives you the best developer experience with all the features you need for production. See the [Next.js documentation](https://nextjs.org/docs) for more information.
+## Track Integration
+- Player NFTs ae created as tradeable assets.
+- Smart contracts are deployed on the Starknet for:
+  - Player agent creation and attribute storage.
+  - Match resolution and scoring.
+  - Tournament management.
+  - Trading system for player agents.
 
-- **Jotai**: Minimalistic state management for React. Jotai provides the simplest way to manage state, reducing complexity while maintaining optimal performance for your application. See the [Jotai documentation](https://jotai.org/docs/introduction) for more information.
 
-- **StarkNet**: As a decentralized, permissionless and scalable zkRollup, StarkNet provides a secure and efficient layer 2 scaling solution, making your DApp more performant and cost-effective. See the [StarkNet documentation](https://docs.starknet.io/) for more information.
 
-## Quick Start
 
-1. Clone the repository:
+---
 
-```bash
-git clone https://github.com/swiiny/starknext
-```
-
-2. Navigate into your new project directory:
-
-```bash
-cd starknext
-```
-
-3. Install the dependencies:
-
-```bash
-npm install
-```
-
-4. Start the development server:
-
-```bash
-npm run dev
-```
-
-Your Starknet-powered DApp is now running locally!
+**Note:** This project uses the Eliza AI framework to power player behavior and decision-making.
